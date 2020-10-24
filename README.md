@@ -1,1 +1,1 @@
-# using-openmp
+# Using OpenMP
