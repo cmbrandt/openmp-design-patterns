@@ -1,1 +1,1 @@
-# Using OpenMP
+# OpenMP Design Patterns
