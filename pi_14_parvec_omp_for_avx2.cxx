@@ -2,7 +2,7 @@
 
 
 // Compile:
-//    g++ -Wall -pedantic -mavx2 -mfma -std=c++17 -fopenmp -O3 pi_14_parvec_omp_for_avx2.cxx -o pi_14.exe
+//    g++ -Wall -pedantic -std=c++17 -fopenmp -mavx2 -mfma -O3 pi_14_parvec_omp_for_avx2.cxx -o pi_14.exe
 
 // Usage:
 //    ./pi_14.exe
@@ -44,13 +44,14 @@ double pi_14_parvec_omp_for_avx2(int num_steps)
         __m256d vidx = _mm256_broadcast_sd(&idx);
         __m256d vx   = _mm256_mul_pd(_mm256_add_pd(vidx, vcoef), vstep);
         __m256d vden = _mm256_fmadd_pd(vx, vx, vone);
-        vsum         = _mm256_add_pd(_mm256_div_pd(vfour, vden), vsum);
+                vsum = _mm256_add_pd(_mm256_div_pd(vfour, vden), vsum);
       }
 
-    double temp[4];
-    _mm256_store_pd(&temp[0], vsum);
-
-    sum[id] = (temp[0] + temp[1] + temp[2] + temp[3]) * step_size;
+    __m128d vl  = _mm256_castpd256_pd128(vsum);
+    __m128d vh  = _mm256_extractf128_pd(vsum, 1);
+            vl  = _mm_add_pd(vl, vh);
+    __m128d h64 = _mm_unpackhi_pd(vl, vl);
+    sum[id]     = _mm_cvtsd_f64(_mm_add_sd(vl, h64)) * step_size; 
   }
 
   double pi = 0.0;

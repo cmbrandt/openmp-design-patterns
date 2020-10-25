@@ -2,7 +2,7 @@
 
 
 // Compile:
-//    g++ -Wall -pedantic -mavx2 -mfma -std=c++17 -fopenmp -O3 pi_11_vec_avx2.cxx -o pi_11.exe
+//    g++ -Wall -pedantic -std=c++17 -fopenmp -mavx2 -mfma -O3 pi_11_vec_avx2.cxx -o pi_11.exe
 
 // Usage:
 //    ./pi_11.exe

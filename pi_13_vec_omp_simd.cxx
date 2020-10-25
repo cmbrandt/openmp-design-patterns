@@ -2,7 +2,7 @@
 
 
 // Compile:
-//    g++ -Wall -pedantic -mavx2 -std=c++17 -fopenmp -O3 pi_13_vec_omp_simd.cxx -o pi_13.exe
+//    g++ -Wall -pedantic -std=c++17 -fopenmp -O3 pi_13_vec_omp_simd.cxx -o pi_13.exe
 
 // Usage:
 //    ./pi_13.exe

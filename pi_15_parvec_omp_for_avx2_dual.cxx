@@ -2,7 +2,7 @@
 
 
 // Compile:
-//    g++ -Wall -pedantic -mavx2 -mfma -std=c++17 -fopenmp -O3 pi_15_parvec_omp_for_avx2_dual.cxx -o pi_15.exe
+//    g++ -Wall -pedantic -std=c++17 -fopenmp -mavx2 -mfma -O3 pi_15_parvec_omp_for_avx2_dual.cxx -o pi_15.exe
 
 // Usage:
 //    ./pi_15.exe
