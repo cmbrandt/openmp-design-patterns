@@ -24,7 +24,7 @@ Parallel algorithm that extends the SPMD implementation by promoting the array f
 Parallel algorithm that modifies that SPMD implementation by creating a private accumulator variable for each thread to store a partial sum.  Following the loop, an OpenMP Critical Section is established to combine each partial sum to a variable shared among all threads.
 
 ##### <code> pi_06_par_omp_for.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel For construct to define a work sharing loop, where the iterations of the loop with be executed by the team of threads within the OpenMP Parallel Section. 
+Parallel algorithm that uses the OpenMP Parallel For construct to define a work sharing loop, where the iterations of the loop are executed by the team of threads within the OpenMP Parallel Section. 
 
 ##### <code> pi_07_par_omp_for_reduction.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel For construct with a reduction clause on the accumulator variable.
