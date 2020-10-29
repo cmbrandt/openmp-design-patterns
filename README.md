@@ -45,7 +45,7 @@ Serial algorithm that uses explicit AVX2 SIMD instructions to perform vectorized
 Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vectorized operations on eight subintervals per loop iteration.
 
 ##### <code> pi_13_vec_omp_simd.cxx </code>
-Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instruction for the loop.
+Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instructions for the loop.
 
 ##### <code> pi_14_parvec_omp_for_avx2.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions for vectorization.
