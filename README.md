@@ -18,7 +18,7 @@ Serial divide-and-conquer algorithm that uses an implementation function to perf
 Parallel algorithm that uses a cyclic distribution of threads to explicitly disable vectorization. The accumulator variable is promoted to an array with length equal to the number of threads employed, and each element of the array stores the partial sum computed by each thread.  Inside the parallel region, each thread ID is used to initialize the loop counter, then incremented by the number of threads after each iteration.  Also demonstrated is how to check the number of threads within an OpenMP Parallel Section and return that number to the user.
 
 ##### <code> pi_04_par_spmd_padded.cxx </code>
-Parallel algorithm that extends the SPMD implementation by promoting the array for storing partial sums to two dimensions.  The size of the second dimension is chosen to be the size of a L1 cache line to eliminate false sharing.  Only the first element of the second dimension is accessed by the routine.
+Parallel algorithm that extends the SPMD implementation by promoting the array for storing partial sums to two dimensions.  The size of the second dimension is chosen to be the size of a L1 cache line, eliminating false sharing between CPU cores.  Only the first element of the second dimension is accessed by the routine.
 
 ##### <code> pi_05_par_spmd_critical.cxx </code>
 Parallel algorithm that modifies that SPMD implementation by creating a private accumulator variable for each thread to store a partial sum.  Following the loop, an OpenMP Critical Section is established to combine each partial sum to a variable shared among all threads.
