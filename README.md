@@ -15,8 +15,6 @@ Serial algorithm to estimate the definite integral by sequentially iterating ove
 Serial divide-and-conquer algorithm that uses an implementation function to perform a series of tail recursive calls for a chosen block size.  Each recursive call computes a partial sum of Riemann sums over a distinct range of subintervals before being combined and returned by the algorithm.
 
 ##### <code> pi_03_par_spmd.cxx </code>
-Parallel algorithm that uses a cyclic distribution of threads to explicitly disable vectorization. The accumulator variable is promoted to an array with length equal to the number of threads employed, and each element of the array stores the partial sum computed by each thread.  Inside the parallel region, each thread ID is used to initialize the loop counter, then incremented by the number of threads after each iteration.  Also demonstrated is how to check the number of threads within an OpenMP Parallel Section and return that number to the user.
-
 Parallel algorithm that uses a cyclic distribution of threads. The accumulator variable is promoted to an array with length equal to the number of threads employed, and each element of the array stores the partial sum computed by each thread.  Inside the parallel region, each thread ID is used to initialize the loop counter, then incremented by the number of threads after each iteration.  Also demonstrated is how to check the number of threads employed at run-time within an OpenMP Parallel Section and return that number to the user.  Note that the cyclic distribution of threads explicitly disables vectorization.
 
 ##### <code> pi_04_par_spmd_padded.cxx </code>
