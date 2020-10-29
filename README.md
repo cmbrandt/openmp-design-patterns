@@ -30,7 +30,7 @@ Parallel algorithm that uses the OpenMP Parallel For construct to define a work 
 Parallel algorithm that uses the OpenMP Parallel For construct with a reduction clause on the accumulator variable.
 
 ##### <code> pi_08_par_omp_task.cxx </code>
-Parallel divide-and-conquer algorithm that uses OpenMP Tasks to perform a sequence of tail-recursive calls for a chosen block size.  A single thread calls the implementation function, and each recursive call creates two new tasks, each working independently but concurrently over a distinct range of subintervals.
+Parallel divide-and-conquer algorithm that uses OpenMP Tasks to perform a sequence of tail recursive calls for a chosen block size.  A single thread calls the implementation function, and each recursive call creates two new tasks, each working independently but concurrently over a distinct range of subintervals.
 
 ##### <code> pi_09_vec_unroll_4.cxx </code>
 Serial algorithm that unrolls four iterations of the loop body, reducing the computational overhead by performing only one quarter of the instructions that control the loop.
@@ -45,7 +45,7 @@ Serial algorithm that uses explicit AVX2 SIMD instructions to perform vectorized
 Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vectorized operations on eight subintervals per loop iteration.
 
 ##### <code> pi_13_vec_omp_simd.cxx </code>
-Serial algorithm that uses the OpenMP SIMD construct to explicitly vectorize the loop.
+Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instruction for the loop.
 
 ##### <code> pi_14_parvec_omp_for_avx2.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions for vectorization.
@@ -54,4 +54,4 @@ Parallel algorithm that uses the OpenMP Parallel construct for multithreading, a
 Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions with dual accumulator variables.
 
 ##### <code> pi_16_parvec_omp_for_simd.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and explicit vectorization.
+Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and vectorization.
