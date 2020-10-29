@@ -39,19 +39,19 @@ Serial algorithm that unrolls four iterations of the loop body, reducing the com
 Serial algorithm that unrolls eight iterations of the loop body.
 
 ##### <code> pi_11_vec_avx2.cxx </code>
-Serial algorithm that uses explicit AVX2 SIMD instructions to perform vectorized operations on four subintervals per loop iteration.
+Serial algorithm that uses explicit AVX2 SIMD instructions to perform vector operations on four loop iterations concurrently.
 
 ##### <code> pi_12_vec_avx2_dual.cxx </code>
-Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vectorized operations on eight subintervals per loop iteration.
+Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vector operations on eight loop iterations concurrently.
 
 ##### <code> pi_13_vec_omp_simd.cxx </code>
 Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instructions for the loop.
 
 ##### <code> pi_14_parvec_omp_for_avx2.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions for vectorization.
+Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions for vector operations.
 
 ##### <code> pi_15_parvec_omp_for_avx2_dual.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions with dual accumulator variables.
 
 ##### <code> pi_16_parvec_omp_for_simd.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and vectorization.
+Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and vector operations.
