@@ -6,7 +6,7 @@ A worked example demonstrating common OpenMP design patterns to compute the defi
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\pi&space;=\int_{0}^{1}&space;\frac{4}{&space;1&plus;x^{2}&space;}\&space;dx" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;\pi&space;=\int_{0}^{1}&space;\frac{4}{&space;1&plus;x^{2}&space;}\&space;dx" title="\large \pi =\int_{0}^{1} \frac{4}{ 1+x^{2} }\ dx" /></a>
 </p>
 
-using the midpoint rule with <a href="https://www.codecogs.com/eqnedit.php?latex=\small&space;2^{20}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\small&space;2^{30}" title="\small 2^{30}" /></a> subintervals.  Each example program is listed below, with a brief description of the algorithm and its implementation details underneath.  For simplicity, each algorithm assumes a number of subintervals evenly divisible by eight.
+using the midpoint rule with <a href="https://www.codecogs.com/eqnedit.php?latex=\small&space;2^{20}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\small&space;2^{20}" title="\small 2^{20}" /></a> subintervals.  Each example program is listed below, with a brief description of the algorithm and its implementation details underneath.  For simplicity, each algorithm assumes a number of subintervals evenly divisible by eight.
 
 ##### <code> pi_01_seq_loop.cxx </code>
 Serial algorithm to estimate the definite integral by sequentially iterating over the subintervals to compute each Riemann sum.
