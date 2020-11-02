@@ -48,10 +48,10 @@ Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator
 Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instructions for the loop.
 
 ##### <code> pi_14_parvec_omp_for_avx2.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions for vector operations.
+Parallel algorithm that uses the OpenMP Parallel construct for multithreading and explicit AVX2 SIMD instructions for vector operations.
 
 ##### <code> pi_15_parvec_omp_for_avx2_dual.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel construct for multithreading, along with explicit AVX2 SIMD instructions with dual accumulator variables.
+Parallel algorithm that uses the OpenMP Parallel construct for multithreading and explicit AVX2 SIMD instructions with dual accumulator variables.
 
 ##### <code> pi_16_parvec_omp_for_simd.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and vector operations.
