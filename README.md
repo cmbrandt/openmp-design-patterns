@@ -21,7 +21,7 @@ Parallel algorithm that uses a cyclic distribution of threads. The accumulator v
 Parallel algorithm that extends the SPMD implementation by promoting the array for storing partial sums to two dimensions.  The size of the second dimension is chosen to match the size of the L1 cache line, eliminating false sharing between CPU cores.  Only the first element of the second dimension is accessed by the routine.
 
 ##### <code> pi_05_par_spmd_critical.cxx </code>
-Parallel algorithm that modifies the SPMD implementation by creating a private accumulator variable for each thread to store a partial sum.  Following the loop, an OpenMP Critical Section is established to combine each partial sum to a variable shared among all threads.
+Parallel algorithm that modifies the SPMD implementation by creating a private accumulator variable for each thread to store a partial sum.  Following the loop, an OpenMP Critical Section is established to write each partial sum to a variable shared among all threads.
 
 ##### <code> pi_06_par_omp_for.cxx </code>
 Parallel algorithm that uses the OpenMP Parallel For construct to define a work sharing loop, where the iterations of the loop are executed by the team of threads within the OpenMP Parallel Section. 
