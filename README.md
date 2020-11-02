@@ -54,4 +54,4 @@ Parallel algorithm that uses the OpenMP Parallel construct for multithreading an
 Parallel algorithm that uses the OpenMP Parallel construct for multithreading and explicit AVX2 SIMD instructions with dual accumulator variables.
 
 ##### <code> pi_16_parvec_omp_for_simd.cxx </code>
-Parallel algorithm that uses the OpenMP Parallel For SIMD construct for multithreading and vector operations.
+Parallel algorithm that uses the OpenMP Parallel For SIMD construct for both multithreading and vector operations.
