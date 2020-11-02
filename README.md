@@ -39,7 +39,7 @@ Serial algorithm that unrolls four iterations of the loop body, reducing the com
 Serial algorithm that unrolls eight iterations of the loop body.
 
 ##### <code> pi_11_vec_avx2.cxx </code>
-Serial algorithm that uses explicit AVX2 SIMD instructions to perform vector operations on four loop iterations concurrently.
+Serial algorithm that uses explicit AVX2 SIMD instructions to perform vector operations on four subintervals per loop iteration.
 
 ##### <code> pi_12_vec_avx2_dual.cxx </code>
 Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vector operations on eight loop iterations concurrently.
