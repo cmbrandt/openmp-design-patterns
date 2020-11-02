@@ -42,7 +42,7 @@ Serial algorithm that unrolls eight iterations of the loop body.
 Serial algorithm that uses explicit AVX2 SIMD instructions to perform vector operations on four subintervals per loop iteration.
 
 ##### <code> pi_12_vec_avx2_dual.cxx </code>
-Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vector operations on eight loop iterations concurrently.
+Serial algorithm that uses explicit AVX2 SIMD instructions with dual accumulator variables to perform vector operations on eight subintervals per loop iteration.
 
 ##### <code> pi_13_vec_omp_simd.cxx </code>
 Serial algorithm that uses the OpenMP SIMD construct to direct the compiler to generate vector instructions for the loop.
