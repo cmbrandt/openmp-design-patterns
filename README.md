@@ -30,7 +30,7 @@ Parallel algorithm that uses the OpenMP Parallel For construct to define a work 
 Parallel algorithm that uses the OpenMP Parallel For construct with a reduction clause on the accumulator variable.
 
 ##### <code> pi_08_par_omp_task.cxx </code>
-Parallel divide-and-conquer algorithm that uses OpenMP Tasks to perform tail recursive calls for a chosen block size.  A single thread calls the implementation function, and each recursive call creates two new tasks, all working independently but concurrently over a distinct range of subintervals.
+Parallel divide-and-conquer algorithm that uses OpenMP Tasks to perform tail recursive calls for a chosen block size. A single thread calls the implementation function, and each recursive call creates two new tasks, with each task working independently but concurrently over a distinct range of subintervals.
 
 ##### <code> pi_09_vec_unroll_4.cxx </code>
 Serial algorithm that unrolls four iterations of the loop body, reducing the computational overhead by performing only one quarter of the instructions that control the loop.
