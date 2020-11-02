@@ -12,7 +12,7 @@ using the midpoint rule with <a href="https://www.codecogs.com/eqnedit.php?latex
 Serial algorithm to estimate the definite integral by sequentially iterating over the subintervals to compute each Riemann sum.
 
 ##### <code> pi_02_seq_recursive.cxx </code>
-Serial divide-and-conquer algorithm that uses an implementation function to perform a series of tail recursive calls for a chosen block size.  Each recursive call computes a partial sum of Riemann sums over a distinct range of subintervals before being combined and returned by the algorithm.
+Serial divide-and-conquer algorithm that uses an implementation function to perform tail recursive calls for a chosen block size.  Each recursive call computes a partial sum of Riemann sums over a distinct range of subintervals before being combined and returned by the algorithm.
 
 ##### <code> pi_03_par_spmd.cxx </code>
 Parallel algorithm that uses a cyclic distribution of threads. The accumulator variable is promoted to an array with length equal to the number of threads employed, and each element of the array stores the partial sum computed by each thread.  Inside the parallel region, each thread ID is used to initialize a loop counter variable for each thread, which is then incremented by the total number of threads following each iteration.  Also demonstrated is how to check the number of threads employed at run-time within an OpenMP Parallel Section and return that number to the user.  Note that the cyclic distribution of threads explicitly disables vectorization.
